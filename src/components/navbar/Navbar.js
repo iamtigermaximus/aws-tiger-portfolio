@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaBars, FaTimes } from 'react-icons/fa'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
+
 import {
   NavbarContainer,
   BrandContainer,
@@ -9,23 +11,28 @@ import {
   BrandLinkItem,
   MenuContainer,
   NavbarLinks,
-  BurgerMenu,
-  MobileMenuContainer,
-  MobileNavbarLinks,
+  // BurgerMenu,
+  // MobileMenuContainer,
+  // MobileNavbarLinks,
+  SocialsContainer,
+  Image,
+  SocialItem,
 } from './Navbar.styles'
+import Logo from '../../assets/SG-logo.png'
 
 const Navbar = () => {
-  const [click, setClick] = useState(true)
-  const categoryMenu = () => setClick(!click)
+  // const [click, setClick] = useState(true)
+  // const categoryMenu = () => setClick(!click)
 
   return (
     <NavbarContainer>
       <BrandContainer>
         <Link to='/'>
-          <BrandLinkItem>SIEGFRED GAMBOA</BrandLinkItem>
+          <BrandLinkItem>
+            <Image src={Logo} />
+          </BrandLinkItem>
         </Link>
       </BrandContainer>
-
       <MenuContainer>
         <NavbarLinks>
           <LinkItemContainer>
@@ -50,38 +57,24 @@ const Navbar = () => {
             </Link>
           </LinkItemContainer>
         </NavbarLinks>
-        <BurgerMenu onClick={categoryMenu}>
-          {click ? <FaBars /> : <FaTimes />}
-          <MobileMenuContainer
-            className={click ? 'category active' : 'category'}
-            onClick={categoryMenu}
-          >
-            <MobileNavbarLinks>
-              <LinkItemContainer>
-                <Link to='/'>
-                  <LinkItem>Home</LinkItem>
-                </Link>
-              </LinkItemContainer>
-              <LinkItemContainer>
-                <Link to='/about'>
-                  <LinkItem>About</LinkItem>
-                </Link>
-              </LinkItemContainer>
-
-              <LinkItemContainer>
-                <Link to='/portfolio'>
-                  <LinkItem>Portfolio</LinkItem>
-                </Link>
-              </LinkItemContainer>
-              <LinkItemContainer>
-                <Link to='/contact'>
-                  <LinkItem>Contact</LinkItem>
-                </Link>
-              </LinkItemContainer>
-            </MobileNavbarLinks>
-          </MobileMenuContainer>
-        </BurgerMenu>
       </MenuContainer>
+      <SocialsContainer>
+        <Link to='/'>
+          <SocialItem>
+            <FaLinkedin />
+          </SocialItem>
+        </Link>
+        <Link to='/'>
+          <SocialItem>
+            <FaGithub />
+          </SocialItem>
+        </Link>
+        <Link to='/'>
+          <SocialItem>
+            <MdEmail />
+          </SocialItem>
+        </Link>
+      </SocialsContainer>
     </NavbarContainer>
   )
 }

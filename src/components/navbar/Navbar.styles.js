@@ -3,13 +3,15 @@ import { breakpoints as bp } from '../../utils/layout'
 import colors from '../../utils/colors'
 
 export const NavbarContainer = styled.nav`
-  width: 100vw;
-  height: 10vh;
-  background: #0a192f;
+  width: 15vw;
+  height: 100%;
+  background: #1d1d1d;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   position: fixed;
+  border: 1px solid gray;
   z-index: 1;
 `
 
@@ -18,17 +20,19 @@ export const BrandContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 30px;
+  padding: 30px 0;
 
   > a {
     text-decoration: none;
   }
 `
 export const BrandLinkItem = styled.div`
-  display: flex;
   color: #e6f1ff;
   font-size: 25px;
   padding: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 export const BrandSubtext = styled.div`
   display: flex;
@@ -51,27 +55,49 @@ export const BurgerMenu = styled.div`
 `
 
 export const LinkItemContainer = styled.div`
- display: flex;
- justify-content: center
- align-items:center
- margin:20px ;
+  display: flex;
+  justify-content: center;
+  opacity: 0.7;
+  width: 100%;
 
- > a {
-  text-decoration: none;
- }
-
+  > a {
+    text-decoration: none;
+  }
 `
 export const LinkItem = styled.h1`
   color: #e6f1ff;
   margin: 10px 10px;
-  padding: 10px 20px;
+  padding: 10px 0px;
   font-size: 20px;
   letter-spacing: 3px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: inset 0 0 0 0 #08fdd8;
+  transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+
+  &: hover {
+    color: #08fdd8;
+    box-shadow: inset 200px 0 0 0 #08fdd8;
+    color: black;
+  }
 `
 
 export const MenuContainer = styled.div`
   display: flex;
-  padding: 0 30px;
+`
+export const SocialsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 50px;
+
+  > a {
+    text-decoration: none;
+  }
 `
 
 export const MobileMenuContainer = styled.div`
@@ -108,6 +134,25 @@ export const NavbarLinks = styled.div`
 
   @media (min-width: ${bp.lg}) {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+  }
+`
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  border: 1px solid #08fdd8;
+`
+export const SocialItem = styled.h1`
+  color: #e6f1ff;
+  font-size: 20px;
+  margin: 10px;
+
+  &: hover {
+    color: #08fdd8;
   }
 `
