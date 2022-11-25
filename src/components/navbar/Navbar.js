@@ -59,21 +59,21 @@ const Navbar = () => {
         </NavbarLinks>
       </MenuContainer>
       <SocialsContainer>
-        <Link to='/'>
-          <SocialItem>
+        <SocialItem>
+          <a href='https://www.linkedin.com/in/siegfred-gamboa-5b1277218'>
             <FaLinkedin />
-          </SocialItem>
-        </Link>
-        <Link to='/'>
-          <SocialItem>
+          </a>
+        </SocialItem>
+        <SocialItem>
+          <a href='https://github.com/iamtigermaximus'>
             <FaGithub />
-          </SocialItem>
-        </Link>
-        <Link to='/'>
-          <SocialItem>
+          </a>
+        </SocialItem>
+        <SocialItem>
+          <a href='mailto:siegy.gamboa@gmail.com'>
             <MdEmail />
-          </SocialItem>
-        </Link>
+          </a>
+        </SocialItem>
       </SocialsContainer>
     </NavbarContainer>
   )

@@ -148,11 +148,15 @@ export const Image = styled.img`
   border: 1px solid #08fdd8;
 `
 export const SocialItem = styled.h1`
-  color: #e6f1ff;
-  font-size: 20px;
+  font-size: 30px;
   margin: 10px;
 
-  &: hover {
-    color: #08fdd8;
+  > a {
+    text-decoration: none;
+    color: #e6f1ff;
+
+    &: hover {
+      color: #08fdd8;
+    }
   }
 `
