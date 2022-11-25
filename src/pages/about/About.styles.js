@@ -69,7 +69,7 @@ export const Name = styled.h1`
 
 export const Caption = styled.h1`
   font-size: 30px;
-  margin: 0;
+  padding: 0 30px;
   letter-spacing: 3px;
 `
 
