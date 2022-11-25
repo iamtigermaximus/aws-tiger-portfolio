@@ -1,27 +1,24 @@
-import { useState, useEffect } from 'react'
-import { API } from 'aws-amplify'
-import { listProjects } from './graphql/queries'
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Navbar from './components/navbar/Navbar'
+import Home from './pages/home/Home'
+import About from './pages/about/About'
+import Portfolio from './pages/portfolio/Portfolio'
+import Contact from './pages/contact/Contact'
 
-function App() {
-  const [projects, setProjects] = useState([])
-
-  useEffect(() => {
-    fetchProjects()
-  }, [])
-  async function fetchProjects() {
-    const apiData = await API.graphql({ query: listProjects })
-    const projectsFromAPI = apiData.data.listProjects.items
-    setProjects(projectsFromAPI)
-    console.log(projectsFromAPI)
-  }
+const App = () => {
   return (
-    <div>
-      <h1>Hello Siegfred</h1>
-      <button onClick={fetchProjects}>Fetch</button>
-      {projects.map((project) => (
-        <h1 key={project.id}>{project.title}</h1>
-      ))}
-    </div>
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/portfolio' element={<Portfolio />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
