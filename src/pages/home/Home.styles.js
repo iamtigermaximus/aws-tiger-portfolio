@@ -11,6 +11,7 @@ export const Container = styled.div`
     height: 100vh;
     color: white;
     padding-left: 15vw;
+    padding-top: 0;
   }
 `
 
