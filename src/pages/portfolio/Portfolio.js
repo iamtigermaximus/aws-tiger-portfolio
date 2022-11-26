@@ -1,20 +1,16 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Fade } from 'react-awesome-reveal'
 import { useState, useEffect } from 'react'
 import { API } from 'aws-amplify'
 import { listProjects } from '../../graphql/queries'
-
-const Container = styled.div`
-  height: 100vh;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1d1d1d;
-  padding-left: 15vw;
-`
-
-const ProjectContainer = styled.div``
+import Particle from '../../components/Particle'
+import {
+  Container,
+  HeadingContainer,
+  Heading,
+  ProjectContainer,
+} from './Portfolio.styles'
+import ProjectCard from '../../components/project-card/ProjectCard'
 
 const Portfolio = () => {
   const [projects, setProjects] = useState([])
@@ -30,11 +26,26 @@ const Portfolio = () => {
   }
   return (
     <Container>
-      <ProjectContainer>
-        {projects.map((project) => (
-          <h1 key={project.id}>{project.title}</h1>
-        ))}
-      </ProjectContainer>
+      <Particle />
+      <Fade direction='down'>
+        <HeadingContainer>
+          <Heading>Projects</Heading>
+        </HeadingContainer>
+      </Fade>
+      <Fade direction='left'>
+        <ProjectContainer>
+          {projects.map((project) => (
+            <ProjectCard
+              id={project.id}
+              image={project.image}
+              title={project.title}
+              tech={project.tech}
+              demo={project.demoLink}
+              github={project.github}
+            />
+          ))}
+        </ProjectContainer>
+      </Fade>
     </Container>
   )
 }

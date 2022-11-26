@@ -25,7 +25,6 @@ export const Heading = styled.div`
 `
 
 export const ContentContainer = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: row;
 `
@@ -81,6 +80,7 @@ export const Role = styled.p`
 export const ImageContainer = styled.div`
   width: 300px;
   height: 400px;
+  z-index: 1;
 `
 
 export const Image = styled.img`

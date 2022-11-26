@@ -1,5 +1,6 @@
 import React from 'react'
 import Profile from '../../assets/smg.png'
+import { Link } from 'react-router-dom'
 import {
   SiTypescript,
   SiNextdotjs,
@@ -82,7 +83,9 @@ const Home = () => {
               </TechItem>
             </TechContainer>
           </Fade>
-          <Button>Contact me!</Button>
+          <Link to='/contact'>
+            <Button>Contact me</Button>
+          </Link>
         </HeroLeft>
         <HeroRight>
           <ImageContainer>

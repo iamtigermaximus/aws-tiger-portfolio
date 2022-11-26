@@ -14,10 +14,12 @@ import {
   ImageContainer,
   Image,
 } from './About.styles'
+import Particle from '../../components/Particle'
 
 const About = () => {
   return (
     <Container>
+      <Particle />
       <ContentContainer>
         <HeroLeft>
           <Fade direction='down'>

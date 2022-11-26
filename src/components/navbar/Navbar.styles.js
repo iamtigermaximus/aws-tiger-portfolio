@@ -74,7 +74,6 @@ export const LinkItem = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
-
   box-shadow: inset 0 0 0 0 #08fdd8;
   transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 
