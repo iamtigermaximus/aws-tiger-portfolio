@@ -13,12 +13,23 @@ export const Container = styled.div`
     padding-top: 0;
   }
 `
+export const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: ${bp.lg}) {
+    margin: 30px;
+  }
+`
 
 export const HeadingContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 `
+
 export const Heading = styled.div`
   display: flex;
   justify-content: center;
@@ -32,17 +43,6 @@ export const Heading = styled.div`
   }
 `
 
-export const ContentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  @media (min-width: ${bp.lg}) {
-    margin: 30px;
-  }
-`
-
 export const Caption = styled.h1`
   font-size: 15px;
   padding: 10px;
@@ -52,21 +52,6 @@ export const Caption = styled.h1`
     padding: 0 30px;
     letter-spacing: 3px;
   }
-`
-
-export const ImageContainer = styled.div`
-  width: 300px;
-  height: 400px;
-`
-
-export const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: black;
-  border: 1px solid #08fdd8;
 `
 
 export const Form = styled.form`
@@ -145,4 +130,19 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`
+
+export const ImageContainer = styled.div`
+  width: 300px;
+  height: 400px;
+`
+
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: black;
+  border: 1px solid #08fdd8;
 `
