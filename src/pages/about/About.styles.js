@@ -1,13 +1,17 @@
 import styled from 'styled-components'
+import { breakpoints as bp } from '../../utils/layout'
 
 export const Container = styled.div`
-  height: 100vh;
-  color: white;
   display: flex;
   justify-content: center;
-  background-color: #1d1d1d;
   align-items: center;
-  padding-left: 15vw;
+  padding-top: 10vh;
+  color: white;
+
+  @media (min-width: ${bp.lg}) {
+    height: 100vh;
+    padding-left: 15vw;
+  }
 `
 
 export const HeadingContainer = styled.div`
@@ -19,68 +23,99 @@ export const Heading = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 70px;
+  font-size: 40px;
   letter-spacing: 3px;
   color: #08fdd8;
+
+  @media (min-width: ${bp.lg}) {
+    font-size: 70px;
+  }
 `
 
 export const ContentContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+
+  @media (min-width: ${bp.lg}) {
+    flex-direction: row;
+  }
 `
 
 export const HeroLeft = styled.div`
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  float: left;
-  opacity: 0.7;
+  width: 100%;
+  @media (min-width: ${bp.lg}) {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    opacity: 0.7;
+  }
 `
 export const LeftContentContainer = styled.div`
   display: flex;
-  text-align: left;
   flex-direction: column;
-  padding: 30px;
-  letter-spacing: 3px;
+  text-align: left;
+
+  @media (min-width: ${bp.lg}) {
+    padding: 30px;
+    letter-spacing: 3px;
+  }
 `
 
 export const RightContentContainer = styled.div`
-  margin: 30px 10px;
-  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+
+  @media (min-width: ${bp.lg}) {
+    margin: 30px 10px;
+    width: 30%;
+  }
 `
 
 export const Greet = styled.h1`
-  font-size: 30px;
-  margin: 0;
-  letter-spacing: 3px;
+  @media (min-width: ${bp.lg}) {
+    font-size: 30px;
+    margin: 0;
+    letter-spacing: 3px;
+  }
 `
 
 export const Name = styled.h1`
-  font-size: 70px;
-  margin: 0;
-  letter-spacing: 3px;
-  color: #08fdd8;
+  @media (min-width: ${bp.lg}) {
+    font-size: 70px;
+    margin: 0;
+    letter-spacing: 3px;
+    color: #08fdd8;
+  }
 `
 
 export const Caption = styled.h1`
-  font-size: 30px;
-  padding: 0 30px;
-  letter-spacing: 3px;
+  font-size: 20px;
+  padding: 10px;
+
+  @media (min-width: ${bp.lg}) {
+    font-size: 30px;
+    padding: 0 30px;
+    letter-spacing: 3px;
+  }
 `
 
 export const Role = styled.p`
-  font-size: 20px;
-  letter-spacing: 3px;
+  @media (min-width: ${bp.lg}) {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
 `
 
 export const ImageContainer = styled.div`
   width: 300px;
   height: 400px;
-  z-index: 1;
 `
 
 export const Image = styled.img`
@@ -110,6 +145,10 @@ export const TechItem = styled.div`
 `
 export const AboutContent = styled.div`
   display: flex;
-  flex-direction: row;
-  padding: 30px;
+  padding: 10px;
+
+  @media (min-width: ${bp.lg}) {
+    flex-direction: row;
+    padding: 30px;
+  }
 `
