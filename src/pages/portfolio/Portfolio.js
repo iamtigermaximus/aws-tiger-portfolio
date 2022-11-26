@@ -36,6 +36,7 @@ const Portfolio = () => {
         <ProjectContainer>
           {projects.map((project) => (
             <ProjectCard
+              key={project.id}
               id={project.id}
               image={project.image}
               title={project.title}
