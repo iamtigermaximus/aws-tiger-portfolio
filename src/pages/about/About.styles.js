@@ -11,6 +11,7 @@ export const Container = styled.div`
   @media (min-width: ${bp.lg}) {
     height: 100vh;
     padding-left: 15vw;
+    padding-top: 0;
   }
 `
 

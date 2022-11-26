@@ -1,27 +1,32 @@
 import styled from 'styled-components'
-//import { breakpoints as bp } from '../../utils/layout'
+import { breakpoints as bp } from '../../utils/layout'
 
 export const Container = styled.div`
-  height: 100%;
-  color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #1d1d1d;
-  padding-left: 15vw;
-  flex-direction: column;
+  padding-top: 10vh;
+  color: white;
+
+  @media (min-width: ${bp.lg}) {
+    padding-left: 15vw;
+    padding-top: 0;
+  }
 `
 export const PageContentContainer = styled.div``
 
 export const ProjectContainer = styled.div`
-  color: black;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-start;
-  height: 100%;
-  padding: 30px;
+  @media (min-width: ${bp.lg}) {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 30px;
+  }
 `
 export const CardContainer = styled.div`
   width: 250px;
@@ -79,9 +84,13 @@ export const Heading = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 70px;
+  font-size: 40px;
   letter-spacing: 3px;
   color: #08fdd8;
+
+  @media (min-width: ${bp.lg}) {
+    font-size: 70px;
+  }
 `
 export const LinksContainer = styled.div`
   display: flex;
