@@ -7,18 +7,18 @@ export const NavbarContainer = styled.nav`
   height: 10vh;
   position: fixed;
   z-index: 2;
-  background: #1d1d1d;
+  background: ${colors.matteBlack};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid ${colors.gray};
 
   @media (min-width: ${bp.lg}) {
     width: 15vw;
     height: 100%;
     flex-direction: column;
     align-items: center;
-    border-right: 1px solid gray;
+    border-right: 1px solid ${colors.gray};
   }
 `
 
@@ -44,7 +44,7 @@ export const BrandLinkItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #e6f1ff;
+  color: ${colors.lightGray};
 
   @media (min-width: ${bp.lg}) {
     font-size: 25px;
@@ -65,7 +65,7 @@ export const LinkItemContainer = styled.div`
   }
 `
 export const LinkItem = styled.h1`
-  color: #e6f1ff;
+  color: ${colors.offWhite};
   font-size: 18px;
   display: flex;
   justify-content: center;
@@ -75,8 +75,8 @@ export const LinkItem = styled.h1`
   width: 150px;
 
   &: hover {
-    color: #08fdd8;
-    box-shadow: inset 200px 0 0 0 #08fdd8;
+    color: ${colors.neonGreen};
+    box-shadow: inset 200px 0 0 0 ${colors.neonGreen};
     color: black;
   }
 
@@ -93,6 +93,7 @@ export const MenuContainer = styled.div`
 `
 export const SocialsContainer = styled.div`
   display: none;
+
   @media (min-width: ${bp.lg}) {
     display: flex;
     flex-direction: row;
@@ -124,7 +125,7 @@ export const Image = styled.img`
   background-color: black;
 
   @media (min-width: ${bp.lg}) {
-    border: 1px solid #08fdd8;
+    border: 1px solid ${colors.neonGreen};
   }
 `
 export const SocialItem = styled.h1`
@@ -151,7 +152,7 @@ export const MobileMenuContainer = styled.div`
   top: 10vh;
   width: 100%;
   height: 100vh;
-  background: #1d1d1d;
+  background: ${colors.matteBlack};
   transform: translateX(0%);
   transition: transform 0.3s ease-out;
 
@@ -177,7 +178,6 @@ export const BurgerMenu = styled.div`
 export const CloseIcon = styled.div`
   display: flex;
   justify-content: flex-end;
-
   width: 100%;
   padding: 10px;
 `

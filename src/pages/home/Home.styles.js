@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { breakpoints as bp } from '../../utils/layout'
+import colors from '../../utils/colors'
 
 export const Container = styled.div`
   display: flex;
@@ -73,14 +74,14 @@ export const Greet = styled.h1`
 `
 
 export const Name = styled.h1`
-  color: #08fdd8;
+  color: ${colors.neonGreen};
   font-size: 50px;
   margin: 0;
 
   @media (min-width: ${bp.lg}) {
     font-size: 70px;
     letter-spacing: 3px;
-    color: #08fdd8;
+    color: ${colors.neonGreen};
   }
 `
 
@@ -117,7 +118,7 @@ export const Image = styled.img`
   background-repeat: no-repeat;
   background-color: black;
   border-radius: 50%;
-  border: 1px solid #08fdd8;
+  border: 1px solid ${colors.neonGreen};
 `
 
 export const TechContainer = styled.div`
@@ -134,7 +135,7 @@ export const TechItem = styled.div`
     font-size: 20px;
 
     &:hover {
-      color: #08fdd8;
+      color: ${colors.neonGreen};
       transform: scale(1.5);
       font-weight: 700;
     }
@@ -144,19 +145,19 @@ export const TechItem = styled.div`
 export const Button = styled.button`
   @media (min-width: ${bp.lg}) {
     width: 150px;
-    border: 1px solid #08fdd8;
-    color: #08fdd8;
+    border: 1px solid ${colors.neonGreen};
+    color: ${colors.neonGreen};
     background: transparent;
     margin: 20px;
     padding: 20px;
     cursor: pointer;
     font-size: 20px;
-    box-shadow: inset 0 0 0 0 #08fdd8;
+    box-shadow: inset 0 0 0 0 ${colors.neonGreen};
     transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 
     &: hover {
       color: #08fdd8;
-      box-shadow: inset 200px 0 0 0 #08fdd8;
+      box-shadow: inset 200px 0 0 0 ${colors.neonGreen};
       color: black;
     }
   }

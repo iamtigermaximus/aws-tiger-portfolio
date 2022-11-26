@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { breakpoints as bp } from '../../utils/layout'
+import colors from '../../utils/colors'
 
 export const Container = styled.div`
   display: flex;
@@ -13,6 +14,7 @@ export const Container = styled.div`
     padding-top: 0;
   }
 `
+
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -36,7 +38,7 @@ export const Heading = styled.div`
   align-items: center;
   font-size: 40px;
   letter-spacing: 3px;
-  color: #08fdd8;
+  color: ${colors.neonGreen};
 
   @media (min-width: ${bp.lg}) {
     font-size: 70px;
@@ -64,7 +66,7 @@ export const Input = styled.input`
   padding: 10px;
   display: flex;
   flex-direction: column;
-  background: #404040;
+  background: ${colors.gray};
   font-size: 15px;
   color: white;
 
@@ -88,10 +90,11 @@ export const Label = styled.label`
     font-size: 16px;
   }
 `
+
 export const TextArea = styled.textarea`
   width: 300px;
   padding: 10px;
-  background: #404040;
+  background: ${colors.gray};
   color: white;
   font-size: 15px;
 
@@ -106,19 +109,19 @@ export const TextArea = styled.textarea`
 `
 export const Button = styled.button`
   width: 150px;
-  border: 1px solid #08fdd8;
-  color: #08fdd8;
+  border: 1px solid ${colors.neonGreen};
+  color: ${colors.neonGreen};
   background: transparent;
   margin: 20px;
   padding: 10px;
   cursor: pointer;
   font-size: 20px;
-  box-shadow: inset 0 0 0 0 #08fdd8;
+  box-shadow: inset 0 0 0 0 ${colors.neonGreen};
   transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 
   &: hover {
-    color: #08fdd8;
-    box-shadow: inset 200px 0 0 0 #08fdd8;
+    color: ${colors.neonGreen};
+    box-shadow: inset 200px 0 0 0 ${colors.neonGreen};
     color: black;
   }
   @media (min-width: ${bp.lg}) {
@@ -144,5 +147,5 @@ export const Image = styled.img`
   background-position: center;
   background-repeat: no-repeat;
   background-color: black;
-  border: 1px solid #08fdd8;
+  border: 1px solid ${colors.neonGreen};
 `

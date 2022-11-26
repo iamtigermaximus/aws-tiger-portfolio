@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { breakpoints as bp } from '../../utils/layout'
+import colors from '../../utils/colors'
 
 export const Container = styled.div`
   display: flex;
@@ -21,13 +22,14 @@ export const HeadingContainer = styled.div`
   align-items: center;
   margin-top: 50px;
 `
+
 export const Heading = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 40px;
   letter-spacing: 3px;
-  color: #08fdd8;
+  color: ${colors.neonGreen};
 
   @media (min-width: ${bp.lg}) {
     font-size: 70px;

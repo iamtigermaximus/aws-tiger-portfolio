@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { breakpoints as bp } from '../../utils/layout'
+import colors from '../../utils/colors'
 
 export const Container = styled.div`
   display: flex;
@@ -20,13 +21,14 @@ export const HeadingContainer = styled.div`
   justify-content: center;
   align-items: center;
 `
+
 export const Heading = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 40px;
   letter-spacing: 3px;
-  color: #08fdd8;
+  color: ${colors.neonGreen};
 
   @media (min-width: ${bp.lg}) {
     font-size: 70px;
@@ -55,6 +57,7 @@ export const HeroLeft = styled.div`
     opacity: 0.7;
   }
 `
+
 export const LeftContentContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -92,7 +95,7 @@ export const Name = styled.h1`
     font-size: 70px;
     margin: 0;
     letter-spacing: 3px;
-    color: #08fdd8;
+    color: ${colors.neonGreen};
   }
 `
 
@@ -126,7 +129,7 @@ export const Image = styled.img`
   background-position: center;
   background-repeat: no-repeat;
   background-color: black;
-  border: 1px solid #08fdd8;
+  border: 1px solid ${colors.neonGreen};
 `
 
 export const TechContainer = styled.div`
@@ -139,7 +142,7 @@ export const TechItem = styled.div`
   font-size: 20px;
 
   &:hover {
-    color: #08fdd8;
+    color: ${colors.neonGreen};
     transform: scale(1.5);
     font-weight: 700;
   }

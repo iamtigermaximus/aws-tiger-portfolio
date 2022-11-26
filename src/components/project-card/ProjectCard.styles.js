@@ -1,14 +1,15 @@
 import styled from 'styled-components'
+import colors from '../../utils/colors'
 //import { breakpoints as bp } from '../../utils/layout'
 
 export const CardContainer = styled.div`
   width: 250px;
   height: 350px;
   margin: 10px;
-  background: #404040;
+  background: ${colors.gray};
   display: flex;
   flex-direction: column;
-  border: 1px solid #08fdd8;
+  border: 1px solid ${colors.neonGreen};
 
   &:hover {
     margin-top: -20px;
@@ -44,14 +45,14 @@ export const Name = styled.h1`
   justify-content: center;
   align-items: center;
   padding: 5px 0;
-  color: white;
+  color: ${colors.offWhite};
 `
 export const Tech = styled.h1`
   display: flex;
   font-size: 10px;
   justify-content: center;
   text-align: center;
-  color: white;
+  color: ${colors.offWhite};
   padding: 5px;
 `
 export const LinksContainer = styled.div`
@@ -64,10 +65,10 @@ export const DemoLink = styled.div`
   margin: 10px;
 
   > a {
-    color: white;
+    color: ${colors.offWhite};
 
     &:hover {
-      color: #08fdd8;
+      color: ${colors.neonGreen};
     }
   }
 `
