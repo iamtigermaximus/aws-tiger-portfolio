@@ -9,8 +9,8 @@ export const Container = styled.div`
   color: white;
 
   @media (min-width: ${bp.lg}) {
-    height: 100vh;
     padding-left: 15vw;
+    padding-top: 0;
   }
 `
 
@@ -44,7 +44,7 @@ export const ContentContainer = styled.div`
 `
 
 export const Caption = styled.h1`
-  font-size: 20px;
+  font-size: 15px;
   padding: 10px;
 
   @media (min-width: ${bp.lg}) {
@@ -76,7 +76,7 @@ export const Form = styled.form`
 `
 export const Input = styled.input`
   width: 300px;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   background: #404040;
@@ -89,6 +89,7 @@ export const Input = styled.input`
 
   @media (min-width: ${bp.lg}) {
     width: 500px;
+    padding: 20px;
   }
 `
 
@@ -96,10 +97,15 @@ export const Label = styled.label`
   padding: 10px 10px;
   display: flex;
   flex-direction: column;
+  font-size: 13px;
+
+  @media (min-width: ${bp.lg}) {
+    font-size: 16px;
+  }
 `
 export const TextArea = styled.textarea`
   width: 300px;
-  padding: 20px;
+  padding: 10px;
   background: #404040;
   color: white;
   font-size: 15px;
@@ -110,6 +116,7 @@ export const TextArea = styled.textarea`
 
   @media (min-width: ${bp.lg}) {
     width: 500px;
+    padding: 20px;
   }
 `
 export const Button = styled.button`
@@ -118,7 +125,7 @@ export const Button = styled.button`
   color: #08fdd8;
   background: transparent;
   margin: 20px;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
   font-size: 20px;
   box-shadow: inset 0 0 0 0 #08fdd8;
@@ -128,6 +135,9 @@ export const Button = styled.button`
     color: #08fdd8;
     box-shadow: inset 200px 0 0 0 #08fdd8;
     color: black;
+  }
+  @media (min-width: ${bp.lg}) {
+    padding: 20px;
   }
 `
 
