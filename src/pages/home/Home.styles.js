@@ -1,21 +1,26 @@
 import styled from 'styled-components'
+import { breakpoints as bp } from '../../utils/layout'
 
 export const Container = styled.div`
-  height: 100vh;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 15vw;
+  @media (min-width: ${bp.lg}) {
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15vw;
+  }
 `
 
 export const ContentContainer = styled.div`
-  margin: 30px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  padding: 50px;
-  z-index: 1;
+  @media (min-width: ${bp.lg}) {
+    margin: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    z-index: 1;
+  }
 `
 
 export const HeroLeft = styled.div`

@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FaLinkedin, FaGithub } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaBars, FaTimes } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-
 import {
   NavbarContainer,
   BrandContainer,
@@ -11,18 +10,18 @@ import {
   BrandLinkItem,
   MenuContainer,
   NavbarLinks,
-  // BurgerMenu,
-  // MobileMenuContainer,
-  // MobileNavbarLinks,
+  BurgerMenu,
+  MobileMenuContainer,
   SocialsContainer,
   Image,
   SocialItem,
+  MobileNavbarLinks,
 } from './Navbar.styles'
 import Logo from '../../assets/SG-logo.png'
 
 const Navbar = () => {
-  // const [click, setClick] = useState(true)
-  // const categoryMenu = () => setClick(!click)
+  const [click, setClick] = useState(true)
+  const categoryMenu = () => setClick(!click)
 
   return (
     <NavbarContainer>
@@ -57,6 +56,36 @@ const Navbar = () => {
             </Link>
           </LinkItemContainer>
         </NavbarLinks>
+        <BurgerMenu onClick={categoryMenu}>
+          {click ? <FaBars /> : <FaTimes />}
+          <MobileMenuContainer
+            className={click ? 'category active' : 'category'}
+            onClick={categoryMenu}
+          >
+            <MobileNavbarLinks>
+              <LinkItemContainer>
+                <Link href='/'>
+                  <LinkItem>Home</LinkItem>
+                </Link>
+              </LinkItemContainer>
+              <LinkItemContainer>
+                <Link href='/about'>
+                  <LinkItem>About</LinkItem>
+                </Link>
+              </LinkItemContainer>
+              <LinkItemContainer>
+                <Link href='/portfolio'>
+                  <LinkItem>Portfolio</LinkItem>
+                </Link>
+              </LinkItemContainer>
+              <LinkItemContainer>
+                <Link href='/contact'>
+                  <LinkItem>Contact</LinkItem>
+                </Link>
+              </LinkItemContainer>
+            </MobileNavbarLinks>
+          </MobileMenuContainer>
+        </BurgerMenu>
       </MenuContainer>
       <SocialsContainer>
         <SocialItem>
