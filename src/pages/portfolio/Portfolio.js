@@ -24,6 +24,7 @@ const Portfolio = () => {
     setProjects(projectsFromAPI)
     console.log(projectsFromAPI)
   }
+
   return (
     <Container>
       <Particle />
