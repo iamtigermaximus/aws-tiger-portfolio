@@ -2,68 +2,105 @@ import styled from 'styled-components'
 import { breakpoints as bp } from '../../utils/layout'
 
 export const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10vh;
+
   @media (min-width: ${bp.lg}) {
     height: 100vh;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-left: 15vw;
   }
 `
 
 export const ContentContainer = styled.div`
-  @media (min-width: ${bp.lg}) {
-    margin: 30px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    padding: 50px;
-    z-index: 1;
-  }
-`
-
-export const HeroLeft = styled.div`
-  margin: 30px 10px;
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  float: left;
-  opacity: 0.7;
-`
-
-export const HeroRight = styled.div`
-  margin: 30px 10px;
-  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 10px;
+
+  @media (min-width: ${bp.lg}) {
+    margin: 30px;
+    width: 100%;
+    flex-direction: row;
+  }
+`
+
+export const HeroLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  order: 2;
+  padding: 10px;
+
+  @media (min-width: ${bp.lg}) {
+    margin: 30px 10px;
+    width: 70%;
+    float: left;
+    opacity: 0.7;
+    order: 1;
+  }
+`
+
+export const HeroRight = styled.div`
+  z-index: 1;
+  order: 1;
+  padding: 10px;
+
+  @media (min-width: ${bp.lg}) {
+    margin: 30px 10px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+  }
 `
 
 export const Greet = styled.h1`
-  font-size: 30px;
-  margin: 0;
-  letter-spacing: 3px;
+  color: white;
+  font-size: 20px;
+
+  @media (min-width: ${bp.lg}) {
+    font-size: 30px;
+    margin: 0;
+    letter-spacing: 3px;
+  }
 `
 
 export const Name = styled.h1`
-  font-size: 70px;
-  margin: 0;
-  letter-spacing: 3px;
   color: #08fdd8;
+  font-size: 50px;
+  margin: 0;
+
+  @media (min-width: ${bp.lg}) {
+    font-size: 70px;
+    letter-spacing: 3px;
+    color: #08fdd8;
+  }
 `
 
 export const Caption = styled.h1`
-  font-size: 50px;
-  margin: 0;
-  letter-spacing: 3px;
+  color: white;
+  font-size: 30px;
+
+  @media (min-width: ${bp.lg}) {
+    font-size: 50px;
+    margin: 0;
+    letter-spacing: 3px;
+  }
 `
 
 export const Role = styled.p`
-  font-size: 20px;
-  letter-spacing: 3px;
+  color: white;
+
+  @media (min-width: ${bp.lg}) {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
 `
 
 export const ImageContainer = styled.div`
@@ -88,31 +125,38 @@ export const TechContainer = styled.div`
 `
 
 export const TechItem = styled.div`
-  margin: 10px;
-  font-size: 20px;
+  color: white;
+  margin: 5px;
 
-  &:hover {
-    color: #08fdd8;
-    transform: scale(1.5);
-    font-weight: 700;
+  @media (min-width: ${bp.lg}) {
+    margin: 10px;
+    font-size: 20px;
+
+    &:hover {
+      color: #08fdd8;
+      transform: scale(1.5);
+      font-weight: 700;
+    }
   }
 `
 
 export const Button = styled.button`
-  width: 150px;
-  border: 1px solid #08fdd8;
-  color: #08fdd8;
-  background: transparent;
-  margin: 20px;
-  padding: 20px;
-  cursor: pointer;
-  font-size: 20px;
-  box-shadow: inset 0 0 0 0 #08fdd8;
-  transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-
-  &: hover {
+  @media (min-width: ${bp.lg}) {
+    width: 150px;
+    border: 1px solid #08fdd8;
     color: #08fdd8;
-    box-shadow: inset 200px 0 0 0 #08fdd8;
-    color: black;
+    background: transparent;
+    margin: 20px;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: inset 0 0 0 0 #08fdd8;
+    transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+
+    &: hover {
+      color: #08fdd8;
+      box-shadow: inset 200px 0 0 0 #08fdd8;
+      color: black;
+    }
   }
 `

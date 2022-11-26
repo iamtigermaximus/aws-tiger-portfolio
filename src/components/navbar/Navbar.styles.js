@@ -6,7 +6,7 @@ export const NavbarContainer = styled.nav`
   width: 100%;
   height: 10vh;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   background: #1d1d1d;
   display: flex;
   flex-direction: row;
@@ -154,7 +154,6 @@ export const MobileMenuContainer = styled.div`
   background: #1d1d1d;
   transform: translateX(0%);
   transition: transform 0.3s ease-out;
-  z-index: 1;
 
   &.active {
     transform: translateX(-100%);

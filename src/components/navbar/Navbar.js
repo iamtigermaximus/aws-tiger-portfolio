@@ -64,22 +64,22 @@ const Navbar = () => {
           >
             <MobileNavbarLinks>
               <LinkItemContainer>
-                <Link href='/'>
+                <Link to='/'>
                   <LinkItem>Home</LinkItem>
                 </Link>
               </LinkItemContainer>
               <LinkItemContainer>
-                <Link href='/about'>
+                <Link to='/about'>
                   <LinkItem>About</LinkItem>
                 </Link>
               </LinkItemContainer>
               <LinkItemContainer>
-                <Link href='/portfolio'>
+                <Link to='/portfolio'>
                   <LinkItem>Portfolio</LinkItem>
                 </Link>
               </LinkItemContainer>
               <LinkItemContainer>
-                <Link href='/contact'>
+                <Link to='/contact'>
                   <LinkItem>Contact</LinkItem>
                 </Link>
               </LinkItemContainer>
