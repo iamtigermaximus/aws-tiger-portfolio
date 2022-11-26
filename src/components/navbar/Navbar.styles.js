@@ -4,7 +4,7 @@ import colors from '../../utils/colors'
 
 export const NavbarContainer = styled.nav`
   width: 100%;
-  height: 8vh;
+  height: 10vh;
   position: fixed;
   z-index: 1;
   background: #1d1d1d;
@@ -148,7 +148,7 @@ export const MobileMenuContainer = styled.div`
   display: flex;
   justify-content: center;
   left: 0;
-  top: 8vh;
+  top: 10vh;
   width: 100%;
   height: 100vh;
   background: #1d1d1d;
