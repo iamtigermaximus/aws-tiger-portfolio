@@ -37,14 +37,19 @@ export const Heading = styled.div`
 `
 
 export const ProjectContainer = styled.div`
-  @media (min-width: ${bp.lg}) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: ${bp.md}) {
     color: black;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
+    // justify-content: flex-start;
     height: 100%;
-    padding: 30px;
+    //padding: 30px;
   }
 `

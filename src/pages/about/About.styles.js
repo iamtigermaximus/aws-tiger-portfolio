@@ -105,8 +105,7 @@ export const Caption = styled.h1`
 
   @media (min-width: ${bp.lg}) {
     font-size: 30px;
-    padding: 0 30px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   }
 `
 
@@ -153,6 +152,5 @@ export const AboutContent = styled.div`
 
   @media (min-width: ${bp.lg}) {
     flex-direction: row;
-    padding: 30px;
   }
 `
