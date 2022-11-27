@@ -30,8 +30,8 @@ const About = () => {
           <LeftContentContainer>
             <Fade direction='down'>
               <Caption>
-                My name is Siegfred. I'm a self-taught web developer based in
-                Helsinki, Finland.
+                My name is Siegfred Gamboa. I'm a self-taught web developer
+                based in Helsinki, Finland.
               </Caption>
             </Fade>
             <Fade direction='left'>
