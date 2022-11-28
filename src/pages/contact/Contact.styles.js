@@ -48,6 +48,8 @@ export const Heading = styled.div`
 export const Caption = styled.h1`
   font-size: 15px;
   padding: 10px;
+  display: flex;
+  text-align: center;
 
   @media (min-width: ${bp.lg}) {
     font-size: 30px;

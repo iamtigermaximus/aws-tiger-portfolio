@@ -32,6 +32,7 @@ import {
   TechItem,
   Button,
 } from './Home.styles'
+import Typewriter from 'typewriter-effect'
 
 const Home = () => {
   return (
@@ -42,7 +43,19 @@ const Home = () => {
           <HeroLeft>
             <Fade direction='down'>
               <Greet>Hey, there!</Greet>
-              <Name>I'm Siegfred.</Name>
+              <Name>
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString("I'm Siegfred.")
+                      .pauseFor(1000)
+                      .start()
+                  }}
+                  options={{
+                    cursor: '',
+                  }}
+                />
+              </Name>
               <Caption>I build things for the web.</Caption>
               <Role>Front End Developer / Full Stack Developer</Role>
               <TechContainer>
