@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Profile from '../../assets/smg.png'
 import { Link } from 'react-router-dom'
 import {
@@ -31,10 +31,31 @@ import {
   TechContainer,
   TechItem,
   Button,
+  SliderSection,
+  SliderImageWrapper,
+  SliderImage,
+  Heading,
+  SectionButton,
+  SectionButtonContainer,
 } from './Home.styles'
 import Typewriter from 'typewriter-effect'
+import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
+import { Carousel } from 'react-responsive-carousel'
+import { API } from 'aws-amplify'
+import { listProjects } from '../../graphql/queries'
 
 const Home = () => {
+  const [projects, setProjects] = useState([])
+
+  useEffect(() => {
+    fetchProjects()
+  }, [])
+  async function fetchProjects() {
+    const apiData = await API.graphql({ query: listProjects })
+    const projectsFromAPI = apiData.data.listProjects.items
+    setProjects(projectsFromAPI)
+    console.log(projectsFromAPI)
+  }
   return (
     <>
       <Container>
@@ -107,6 +128,28 @@ const Home = () => {
             </ImageContainer>
           </HeroRight>
         </ContentContainer>
+        <SliderSection>
+          <Heading>My Portfolio</Heading>
+          <SliderImageWrapper>
+            <Carousel
+              autoPlay
+              infiniteLoop
+              showArrows={false}
+              showIndicators={false}
+              showThumbs={false}
+              showStatus={false}
+            >
+              {projects.map((project, index) => {
+                return <SliderImage src={project.image} alt='' key={index} />
+              })}
+            </Carousel>
+          </SliderImageWrapper>
+          <SectionButtonContainer>
+            <Link to='/portfolio'>
+              <SectionButton>View my work page</SectionButton>
+            </Link>
+          </SectionButtonContainer>
+        </SliderSection>
       </Container>
     </>
   )
